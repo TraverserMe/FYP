@@ -28,7 +28,7 @@ export default function BuyerDashboard() {
             <>
                 {items && !loading ? 
                     <div className='container mx-auto w-100 text-center'>
-                        <h2>Seller Dashboard</h2>
+                        <h2 className='text-xl'>Seller Dashboard</h2>
                         <select className="w-1/6 h-16 px-2 mx-2 rounded border-4 border-slate-700 justify-self-center text-2xl" onChange={e => setSoldState(e.target.value)}>
                             <option value="All">All</option>
                             <option value="Sold">Sold</option>

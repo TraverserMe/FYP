@@ -28,7 +28,7 @@ export default function BuyerDashboard() {
             <>
                 {items && !loading ? 
                     <div className='container mx-auto w-100 text-center'>
-                        <h2>Buyer History</h2>
+                        <h2 className='text-xl'>Buyer History</h2>
                         <select onChange={e => setType(e.target.value)} className="w-1/6 h-16 px-2 mx-2 rounded border-4 border-slate-700 justify-self-center text-2xl">
                             {types.map((type, index) => (
                                 <option key={index} value={type}>{type}</option>

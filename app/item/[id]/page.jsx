@@ -12,23 +12,24 @@ export default function page({ params }){
     const { isConnected, isConnectedRef, shownText, account, checkConnection } = chectMeta();  
     const { item , loading , buyitem } = interactItem(id);
     return(
-       <>
-            <div className='container mx-auto'>
-                <div className='text-start'>
+       <main className="w-screen ">
+            <div className='grid justify-items-center'>
+                
                 {!isConnectedRef.current && <h1 className='text-xl'>Welcome, connect Metamask to buy or or sell item (Dashboard too)</h1>}
                 {isConnectedRef.current && 
                     <>
                         {item && !loading ? 
-                            <div>
+                            <div className='w-2/3'>
                                 <h1>Item Details</h1>
                                 <ul>
                                     <Image
                                         src={`https://ipfs.io/ipfs/${item.image}`}
                                         alt={item.name}
-                                        width={500}
-                                        height={500}
+                                        width='0'
+                                        height='0'
+                                        sizes="50vw"
+                                        className="w-auto h-96 mx-auto"
                                         priority={true}
-                                        className='h-1/3 w-auto'
                                     >
                                     </Image>
                                     <li>Item ID: {id}</li>
@@ -64,9 +65,9 @@ export default function page({ params }){
                         }
                     </>
                 }
-             </div>
+             
         </div>
-    </>
+    </main>
     )
 
 }

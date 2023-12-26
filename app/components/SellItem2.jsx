@@ -129,7 +129,7 @@ useEffect(() => {
   if(gasfee != "?"){
     getGasEstimate()
   }
-  console.log(account);
+  // console.log(account);
 },[gasfee])
 
 
@@ -172,13 +172,15 @@ return (
   
   {isConnected &&
     <form onSubmit={handleSubmit}>
-      <h2 className="text-base font-semibold leading-7 text-gray-900">Sell</h2>
-      <div className="space-y-15">
-        <Link href={`/seller`}>        
-          <button 
-              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full'
-          >Seller Dashboard</button>
-        </Link>
+      <h2 className="text-3xl font-semibold leading-7 text-gray-900">Upload your item here!</h2>
+      <div>
+        <div  className="flex justify-end ">
+          <Link href={`/seller`} className="me-0">        
+            <button 
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full'
+            >Seller Dashboard</button>
+          </Link>
+        </div>
         <div className="border-b border-gray-900/10 pb-12">
           <p className="mt-1 text-sm leading-6 text-gray-600">
             Account Number: <span className="font-bold" id='acc_number'>{account}</span>
